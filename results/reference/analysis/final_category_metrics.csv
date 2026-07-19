@@ -1,0 +1,5 @@
+analysis_level,group,reference_evaluable_N,Reference_Top1,Reference_Top3,Reference_Top5,Reference_MRR,Reference_median_rank,Reference_median_rank_percentile,first_supported_evaluable_N,First_supported_Top1,First_supported_Top3,First_supported_MRR
+pocket_archetype,allosteric,4,0.25,1,1,0.583333333333333,2,0.982236842105263,4,0.75,1,0.875
+pocket_archetype,complex-dependent,4,0.25,0.5,0.75,0.4625,3,0.966971544715447,4,1,1,1
+pocket_archetype,interface/PPI,8,0.75,1,1,0.854166666666667,1,1,8,1,1,1
+pocket_archetype,orthosteric,5,0.8,0.8,0.8,0.833333333333333,1,1,5,1,1,1

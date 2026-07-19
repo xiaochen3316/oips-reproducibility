@@ -1,0 +1,227 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://oips-repro.example/schema/public-data-v1.json",
+  "title": "OIPS public reproducibility data contracts",
+  "description": "Row-level contracts and deterministic column orders for the curated public snapshot.",
+  "schema_version": 1,
+  "type": "object",
+  "properties": {
+    "schema_version": {"const": 1}
+  },
+  "required": ["schema_version"],
+  "additionalProperties": true,
+  "$defs": {
+    "tool_pocket_features_row": {
+      "type": "object",
+      "x-primary-key": ["row_id"],
+      "x-sort-key": ["pdb_id", "tool", "row_id"],
+      "x-missingness": "Empty fields represent unavailable numeric values; textual missing-value tokens are forbidden.",
+      "x-columns": ["row_id", "pdb_id", "tool", "pocket_id", "display_order", "sitemap_rank", "center_x", "center_y", "center_z", "center_method", "residue_count", "residue_set_json", "pocket_geometry_score", "pocket_ligandability_score"],
+      "required": ["row_id", "pdb_id", "tool", "pocket_id", "display_order", "sitemap_rank", "center_x", "center_y", "center_z", "center_method", "residue_count", "residue_set_json", "pocket_geometry_score", "pocket_ligandability_score"],
+      "additionalProperties": false,
+      "properties": {
+        "row_id": {"type": "integer", "minimum": 0},
+        "pdb_id": {"type": "string", "pattern": "^[0-9][A-Z0-9]{3}$"},
+        "tool": {"type": "string", "minLength": 1},
+        "pocket_id": {"type": "string", "minLength": 1},
+        "display_order": {"type": ["integer", "null"]},
+        "sitemap_rank": {"type": ["integer", "null"]},
+        "center_x": {"type": ["number", "null"]},
+        "center_y": {"type": ["number", "null"]},
+        "center_z": {"type": ["number", "null"]},
+        "center_method": {"type": "string"},
+        "residue_count": {"type": "integer", "minimum": 0},
+        "residue_set_json": {"type": "string", "pattern": "^\\[.*\\]$"},
+        "pocket_geometry_score": {"type": ["number", "null"]},
+        "pocket_ligandability_score": {"type": ["number", "null"]}
+      }
+    },
+    "systems_row": {
+      "type": "object",
+      "x-primary-key": ["pdb_id"],
+      "x-sort-key": ["pdb_id"],
+      "x-columns": ["pdb_id", "protein_system", "oligomeric_state", "reference_ligand_annotation", "dataset_role", "pocket_category", "category_mapping_status", "protein_family", "structure_source", "structure_source_version_or_date", "biological_assembly_id", "chain_mapping", "retained_hetero_groups", "deleted_hetero_groups", "missing_residue_atom_handling", "protonation_tool", "protonation_ph", "force_field", "water_model", "md_engine", "md_engine_version", "md_timestep_fs", "md_ensemble", "md_random_seed", "trajectory_alignment", "trajectory_sampling", "pocket_tools_and_versions", "id_mapping_provenance", "metadata_completeness", "metadata_status"],
+      "required": ["pdb_id", "protein_system", "oligomeric_state", "reference_ligand_annotation", "dataset_role", "pocket_category", "category_mapping_status", "protein_family", "structure_source", "structure_source_version_or_date", "biological_assembly_id", "chain_mapping", "retained_hetero_groups", "deleted_hetero_groups", "missing_residue_atom_handling", "protonation_tool", "protonation_ph", "force_field", "water_model", "md_engine", "md_engine_version", "md_timestep_fs", "md_ensemble", "md_random_seed", "trajectory_alignment", "trajectory_sampling", "pocket_tools_and_versions", "id_mapping_provenance", "metadata_completeness", "metadata_status"],
+      "additionalProperties": false,
+      "properties": {
+        "pdb_id": {"type": "string", "pattern": "^[0-9][A-Z0-9]{3}$"},
+        "protein_system": {"type": "string", "minLength": 1},
+        "oligomeric_state": {"type": "string", "minLength": 1},
+        "reference_ligand_annotation": {"type": "string", "minLength": 1},
+        "dataset_role": {"type": "string", "minLength": 1},
+        "pocket_category": {"type": "string", "minLength": 1},
+        "category_mapping_status": {"type": "string", "minLength": 1},
+        "protein_family": {"type": "string", "minLength": 1},
+        "structure_source": {"const": "RCSB PDB-derived prepared structure"},
+        "structure_source_version_or_date": {"type": "string", "minLength": 1},
+        "biological_assembly_id": {"type": "string", "minLength": 1},
+        "chain_mapping": {"type": "string", "minLength": 1},
+        "retained_hetero_groups": {"type": "string", "minLength": 1},
+        "deleted_hetero_groups": {"type": "string", "minLength": 1},
+        "missing_residue_atom_handling": {"type": "string", "minLength": 1},
+        "protonation_tool": {"type": "string", "minLength": 1},
+        "protonation_ph": {"type": "string", "minLength": 1},
+        "force_field": {"type": "string", "minLength": 1},
+        "water_model": {"type": "string", "minLength": 1},
+        "md_engine": {"type": "string", "minLength": 1},
+        "md_engine_version": {"type": "string", "minLength": 1},
+        "md_timestep_fs": {"type": "string", "minLength": 1},
+        "md_ensemble": {"type": "string", "minLength": 1},
+        "md_random_seed": {"type": "string", "minLength": 1},
+        "trajectory_alignment": {"type": "string", "minLength": 1},
+        "trajectory_sampling": {"type": "string", "minLength": 1},
+        "pocket_tools_and_versions": {"type": "string", "minLength": 1},
+        "id_mapping_provenance": {"type": "string", "minLength": 1},
+        "metadata_completeness": {"type": "string", "minLength": 1},
+        "metadata_status": {"const": "author_confirmation_required"}
+      }
+    },
+    "reference_annotations_row": {
+      "type": "object",
+      "x-primary-key": ["pdb_id"],
+      "x-sort-key": ["pdb_id"],
+      "x-columns": ["pdb_id", "selected_ligand", "ligand_status", "reference_ligand_annotation", "override_applied", "decision_id"],
+      "required": ["pdb_id", "selected_ligand", "ligand_status", "reference_ligand_annotation", "override_applied", "decision_id"],
+      "additionalProperties": false,
+      "properties": {
+        "pdb_id": {"type": "string", "pattern": "^[0-9][A-Z0-9]{3}$"},
+        "selected_ligand": {"type": "string", "minLength": 1},
+        "ligand_status": {"type": "string", "minLength": 1},
+        "reference_ligand_annotation": {"type": "string", "minLength": 1},
+        "override_applied": {"type": "boolean"},
+        "decision_id": {"type": "string", "minLength": 1}
+      }
+    },
+    "md_evidence_row": {
+      "type": "object",
+      "x-primary-key": ["pdb_id", "Simulation_context", "MD_run"],
+      "x-sort-key": ["pdb_id", "Simulation_context", "MD_run"],
+      "x-columns": ["pdb_id", "MD_run", "Simulation_context", "Persistent_MD_contact_residues", "MD_contact_center", "D_dyn_run_score"],
+      "required": ["pdb_id", "MD_run", "Simulation_context", "Persistent_MD_contact_residues", "MD_contact_center", "D_dyn_run_score"],
+      "additionalProperties": false,
+      "properties": {
+        "pdb_id": {"type": "string", "pattern": "^[0-9][A-Z0-9]{3}$"},
+        "MD_run": {"type": "string", "minLength": 1},
+        "Simulation_context": {"type": "string", "minLength": 1},
+        "Persistent_MD_contact_residues": {"type": "string"},
+        "MD_contact_center": {"type": "string"},
+        "D_dyn_run_score": {"type": ["number", "null"]}
+      }
+    },
+    "redocking_evidence_row": {
+      "type": "object",
+      "x-primary-key": ["pdb_id"],
+      "x-sort-key": ["pdb_id"],
+      "x-columns": ["pdb_id", "Docking_software", "GlideScore_kcal_per_mol", "Raw_ligand_RMSD_A", "RMSD_threshold_call", "Failure_or_warning_reason"],
+      "required": ["pdb_id", "Docking_software", "GlideScore_kcal_per_mol", "Raw_ligand_RMSD_A", "RMSD_threshold_call", "Failure_or_warning_reason"],
+      "additionalProperties": false,
+      "properties": {
+        "pdb_id": {"type": "string", "pattern": "^[0-9][A-Z0-9]{3}$"},
+        "Docking_software": {"type": "string", "minLength": 1},
+        "GlideScore_kcal_per_mol": {"type": ["number", "null"]},
+        "Raw_ligand_RMSD_A": {"type": ["number", "null"]},
+        "RMSD_threshold_call": {"type": "string"},
+        "Failure_or_warning_reason": {"type": "string"}
+      }
+    },
+    "legacy_crosswalk_row": {
+      "type": "object",
+      "x-primary-key": ["pdb_id", "working_cluster_id", "cluster_v2_id"],
+      "x-sort-key": ["pdb_id", "working_cluster_id", "cluster_v2_id"],
+      "x-columns": ["pdb_id", "working_cluster_id", "cluster_v2_id", "mapped_record_count", "working_cluster_member_count", "mapping_fraction", "unmappable_record_count", "mapping_type"],
+      "required": ["pdb_id", "working_cluster_id", "cluster_v2_id", "mapped_record_count", "working_cluster_member_count", "mapping_fraction", "unmappable_record_count", "mapping_type"],
+      "additionalProperties": false,
+      "properties": {
+        "pdb_id": {"type": "string", "pattern": "^[0-9][A-Z0-9]{3}$"},
+        "working_cluster_id": {"type": "string", "minLength": 1},
+        "cluster_v2_id": {"type": ["string", "null"]},
+        "mapped_record_count": {"type": "integer", "minimum": 0},
+        "working_cluster_member_count": {"type": "integer", "minimum": 1},
+        "mapping_fraction": {"type": "number", "minimum": 0, "maximum": 1},
+        "unmappable_record_count": {"type": "integer", "minimum": 0},
+        "mapping_type": {"type": "string", "minLength": 1}
+      }
+    },
+    "asset_rights_row": {
+      "type": "object",
+      "x-primary-key": ["asset_class"],
+      "x-columns": ["asset_class", "scientific_role", "source_provider", "content_scope", "repository_action", "review_status", "license_scope", "terms_or_evidence_url", "approval_basis", "review_date", "notes"],
+      "required": ["asset_class", "scientific_role", "source_provider", "content_scope", "repository_action", "review_status", "license_scope", "terms_or_evidence_url", "approval_basis", "review_date", "notes"],
+      "additionalProperties": false,
+      "properties": {
+        "asset_class": {"type": "string", "minLength": 1},
+        "scientific_role": {"type": "string", "minLength": 1},
+        "source_provider": {"type": "string", "minLength": 1},
+        "content_scope": {"type": "string", "minLength": 1},
+        "repository_action": {"enum": ["commit_local_payload", "manifest_only", "exclude"]},
+        "review_status": {"enum": ["approved_for_repository", "manifest_only", "excluded"]},
+        "license_scope": {"type": "string", "minLength": 1},
+        "terms_or_evidence_url": {"type": "string", "minLength": 1},
+        "approval_basis": {"type": "string", "minLength": 1},
+        "review_date": {"type": "string", "format": "date"},
+        "notes": {"type": "string", "minLength": 1}
+      }
+    },
+    "manual_decisions_row": {
+      "type": "object",
+      "x-primary-key": ["decision_id"],
+      "x-columns": ["decision_id", "pdb_id_or_scope", "decision_type", "field_name", "previous_value", "released_value", "rationale", "evidence_source", "approval_status"],
+      "required": ["decision_id", "pdb_id_or_scope", "decision_type", "field_name", "previous_value", "released_value", "rationale", "evidence_source", "approval_status"],
+      "additionalProperties": false,
+      "properties": {
+        "decision_id": {"type": "string", "pattern": "^DEC-[A-Z0-9-]+$"},
+        "pdb_id_or_scope": {"type": "string", "minLength": 1},
+        "decision_type": {"enum": ["reference_key_correction", "category_annotation", "parameter_override", "representative_case_selection"]},
+        "field_name": {"type": "string", "minLength": 1},
+        "previous_value": {"type": "string", "minLength": 1},
+        "released_value": {"type": "string", "minLength": 1},
+        "rationale": {"type": "string", "minLength": 1},
+        "evidence_source": {"type": "string", "minLength": 1},
+        "approval_status": {"const": "approved_for_repository"}
+      }
+    },
+    "manifest_row": {
+      "type": "object",
+      "x-primary-key": ["asset_id"],
+      "x-columns": ["asset_id", "scientific_role", "local_path_or_url", "repository", "persistent_id", "sha256", "bytes", "media_type", "license_or_terms", "access_status", "source_version_or_date"],
+      "required": ["asset_id", "scientific_role", "local_path_or_url", "repository", "persistent_id", "sha256", "bytes", "media_type", "license_or_terms", "access_status", "source_version_or_date"],
+      "additionalProperties": false,
+      "properties": {
+        "asset_id": {"type": "string", "pattern": "^[a-z0-9-]+$"},
+        "scientific_role": {"type": "string", "minLength": 1},
+        "local_path_or_url": {"type": "string", "minLength": 1},
+        "repository": {"type": "string", "minLength": 1},
+        "persistent_id": {"type": "string", "minLength": 1},
+        "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "bytes": {"type": "integer", "minimum": 1},
+        "media_type": {"type": "string", "minLength": 1},
+        "license_or_terms": {"type": "string", "minLength": 1},
+        "access_status": {"const": "repository_local"},
+        "source_version_or_date": {"type": "string", "minLength": 1}
+      }
+    },
+    "external_archive_manifest_row": {
+      "type": "object",
+      "x-primary-key": ["asset_id"],
+      "x-columns": ["asset_id", "pdb_id_or_scope", "scientific_role", "archive_filename_or_label", "local_availability", "repository", "persistent_id", "bytes", "sha256", "access_status", "completeness", "license_status", "source_version_or_date", "notes"],
+      "required": ["asset_id", "pdb_id_or_scope", "scientific_role", "archive_filename_or_label", "local_availability", "repository", "persistent_id", "bytes", "sha256", "access_status", "completeness", "license_status", "source_version_or_date", "notes"],
+      "additionalProperties": false,
+      "properties": {
+        "asset_id": {"type": "string", "pattern": "^[a-z0-9-]+$"},
+        "pdb_id_or_scope": {"type": "string", "minLength": 1},
+        "scientific_role": {"enum": ["full MD inputs", "full MD trajectories", "restart or checkpoint files", "representative MD snapshots", "large raw pocket outputs"]},
+        "archive_filename_or_label": {"type": "string", "minLength": 1},
+        "local_availability": {"enum": ["available_locally", "not_available_in_source_materials"]},
+        "repository": {"type": "string", "minLength": 1},
+        "persistent_id": {"type": "string"},
+        "bytes": {"oneOf": [{"type": "integer", "minimum": 0}, {"const": "not_available_in_source_materials"}]},
+        "sha256": {"oneOf": [{"type": "string", "pattern": "^[0-9a-f]{64}$"}, {"const": "not_available_in_source_materials"}]},
+        "access_status": {"enum": ["not_archived", "not_available_in_source_materials"]},
+        "completeness": {"type": "string", "minLength": 1},
+        "license_status": {"type": "string", "minLength": 1},
+        "source_version_or_date": {"type": "string", "minLength": 1},
+        "notes": {"type": "string", "minLength": 1}
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+relative_path	material_type	source	software_or_database	derived_or_raw	redistribution_status	recommended_action	rationale
+data/structures/*_paired.pdb;data/structures/*_paired.cif	prepared coordinate structures	PDB entries transformed by OIPS team	RCSB PDB	derived	approved_for_repository_with_attribution	retain_and_confirm_attribution	RCSB policy and source identifiers are recorded; final record-level author review remains required
+data/static/tool_pocket_features.csv	normalized pocket measurements	OIPS team normalization	CASTpFold; ProteinsPlus DoGSiteScorer/DoGSite3; CavityPlus; SiteMap	derived	approved_for_repository	retain	Only normalized factual fields are included; raw service and commercial files are excluded
+data/posthoc/md_evidence.csv	minimal MD evidence summary	OIPS team	Schrodinger Desmond	derived	approved_for_repository	retain	No trajectories, checkpoints, logs, or licensed binaries are included
+data/posthoc/redocking_evidence.csv	minimal redocking evidence summary	OIPS team	Schrodinger Glide	derived	approved_for_repository	retain	No project files, raw poses, logs, or license material are included
+data/posthoc/reference_annotations.csv	curated ligand annotations	OIPS team; PDB structures	RCSB PDB	derived	approved_for_repository	retain	Keys and decision linkage are needed for reproducibility
+data/external_archive_manifest.tsv	excluded-material inventory	OIPS team	multiple	metadata_only	approved_for_repository	retain	Records absence or future archive status without redistributing restricted files
+figures/manuscript/*.svg	repository summary figures	OIPS team	Python/matplotlib	derived	approved_for_repository	retain	Generated from repository source-data tables
+raw SiteMap/Glide/Desmond projects	raw commercial-software outputs	not included	Schrodinger	raw	not_redistributed	exclude	Vendor terms and unnecessary proprietary formats
+raw CASTpFold/DoGSite/CavityPlus downloads	raw service outputs	not included	third-party web services	raw	requires_manual_review	exclude_unless_permission_confirmed	Normalized fields suffice; raw-package redistribution status is not asserted
+MD trajectories/checkpoints	large simulation artifacts	not included	Schrodinger Desmond	raw_or_derived	not_redistributed	exclude_or_deposit_after_review	Large files and vendor/structure terms require a separate reviewed archive

@@ -1,0 +1,24 @@
+analysis_name	input_available	implementation_available	output_available	test_available	figure_source_available	fully_reproducible	missing_components	recommended_action
+1742 tool-record input and mapping	yes	yes	yes	yes	yes	yes		retain
+unmappable-record exclusion	yes	yes	yes	yes	yes	yes		retain
+same-tool consolidation	yes	yes	yes	yes	no	yes		retain
+cluster-v2 reconstruction	yes	yes	yes	yes	yes	yes		retain
+733 formal candidates	yes	yes	yes	yes	yes	yes		retain
+OIPS-P_static module calculation	yes	yes	yes	yes	yes	yes		retain
+missing-aware normalization	yes	yes	yes	yes	no	yes		retain
+O_rel_formal calculation	yes	yes	yes	yes	yes	yes		retain
+frozen within-target ranking	yes	yes	yes	yes	yes	yes		retain
+Top-3 automated QC	yes	yes	yes	yes	yes	yes		retain
+reference-associated Top-k and MRR	yes	yes	yes	yes	yes	yes		retain
+first-supported Top-k and MRR	yes	yes	yes	yes	yes	yes		retain
+target-level bootstrap	yes	yes	yes	yes	yes	yes		retain
+family-clustered bootstrap	yes	yes	yes	yes	yes	yes		retain
+leave-one-family-out analysis	yes	yes	yes	yes	no	yes		retain
+O_rel ablation	yes	yes	yes	yes	yes	yes		retain
+redocking evidence mapping	yes	yes	yes	yes	yes	yes		retain
+MD evidence mapping and concordance	yes	yes	yes	yes	yes	yes		retain
+representative-case data	yes	yes	yes	yes	yes	yes		retain
+unresolved-case register	yes	yes	yes	yes	no	yes		retain
+repository figure source data	yes	yes	yes	yes	yes	yes	final manuscript mapping	confirm mapping before submission
+plus/minus 20 percent weight perturbation sensitivity	yes	yes	yes	yes	no	yes		retain
+14-system single-tool complete-case comparison	yes	yes	yes	yes	yes	yes		retain

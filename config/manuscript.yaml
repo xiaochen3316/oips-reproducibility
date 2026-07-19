@@ -1,0 +1,144 @@
+schema_version: 1
+analysis:
+  id: oips_cluster_v2_20260711
+  representative_case_ids: [5J89, 5TBM, 4W9H]
+paths:
+  schema: config/schema.json
+  data_manifest: data/manifest.tsv
+  data_checksums: data/SHA256SUMS
+  asset_rights: data/metadata/asset-rights.tsv
+  external_archive_manifest: data/external_archive_manifest.tsv
+  expected_summary: tests/scientific/data/expected_summary.json
+  feature_table: data/static/tool_pocket_features.csv
+  systems: data/metadata/systems.tsv
+  structure_manifest: data/manifest.tsv
+  structures_dir: data/structures
+  reference_annotations: data/posthoc/reference_annotations.csv
+  md_evidence: data/posthoc/md_evidence.csv
+  redocking_evidence: data/posthoc/redocking_evidence.csv
+  legacy_crosswalk: legacy/working-cluster-to-cluster-v2.csv
+  figure_contract: config/figure_contract.yaml
+  reference_results: results/reference
+  default_output: results/reproduced
+tool_weights:
+  DoGSiteScorer: 1.00
+  DoGSite3: 1.00
+  CavityPlus: 1.00
+  CASTpFold: 0.75
+  SiteMap: 1.15
+clustering:
+  same_tool:
+    residue_iou_strong: 0.70
+    residue_containment_nested: 0.85
+    nested_center_max_A: 8.0
+    near_center_max_A: 2.5
+    near_center_min_iou: 0.25
+    center_only_duplicate_max_A: 1.5
+    dogsite_hierarchy_center_max_A: 6.0
+    dogsite_hierarchy_min_iou: 0.35
+    dogsite_hierarchy_containment_min: 0.70
+    group_center_diameter_max_A: 8.0
+    representative_missing_center_penalty: 0.20
+    representative_missing_residue_penalty: 0.20
+  cross_tool:
+    close_center_max_A: 6.0
+    conditional_center_max_A: 10.0
+    conditional_residue_iou_min: 0.20
+    residue_iou_min: 0.35
+    cluster_center_diameter_max_A: 12.0
+scoring:
+  module_weights:
+    C_cons: 0.22
+    G_geo: 0.18
+    P_lig: 0.24
+    O_rel_formal: 0.24
+    Q_evidence: 0.12
+  geometry_top_n: 3
+  ligandability_top_n: 2
+  q_evidence:
+    base: 30.0
+    per_representative: 9.0
+    center_fraction: 18.0
+    residue_fraction: 14.0
+    sitemap_bonus: 4.0
+  interface:
+    contact_cutoff_A: 5.0
+    weights:
+      interface_fraction: 0.42
+      chain_context: 0.25
+      distance: 0.20
+      interface_extent: 0.13
+    distance_score:
+      near_max_A: 4.0
+      near_score: 100.0
+      intermediate_max_A: 8.0
+      intermediate_start: 90.0
+      intermediate_loss_per_A: 5.0
+      far_max_A: 16.0
+      far_start: 70.0
+      far_loss_per_A: 6.0
+      tail_start: 22.0
+      tail_loss_per_A: 1.2
+      tail_floor: 10.0
+    interface_fraction_base: 25.0
+    interface_fraction_multiplier: 130.0
+    multi_chain_base: 75.0
+    chain_entropy_multiplier: 25.0
+    single_chain_interface_fraction_min: 0.35
+    single_chain_supported_score: 65.0
+    single_chain_other_score: 30.0
+    context_base: 45.0
+    context_per_extra_chain: 10.0
+    context_extra_chain_cap: 4
+    context_interface_fraction_cap: 0.5
+    context_interface_fraction_multiplier: 80.0
+    no_interface_monomer_score: 35.0
+    no_interface_multichain_score: 45.0
+  boundary:
+    diameter_gt_A: 9.0
+    dispersion_gt_A: 4.0
+    core_envelope_ratio_lt: 0.20
+    median_residue_iou_lt: 0.15
+ranking:
+  direction: descending
+  tie_method: average
+posthoc:
+  top3_qc:
+    top_k: 3
+    overmerge_diameter_gt_A: 10.5
+    overmerge_core_ratio_lt: 0.25
+    overmerge_secondary_units_min: 4
+    overmerge_tool_support_max: 2
+    overmerge_median_iou_lt: 0.15
+    exclusion_diameter_gt_A: 11.5
+    exclusion_core_ratio_lt: 0.10
+    exclusion_tool_support_min: 2
+    split_tool_support_min: 2
+    split_dispersion_gt_A: 4.0
+    split_median_iou_lt: 0.15
+    split_core_ratio_lt: 0.20
+    surface_noise_tool_support: 1
+    surface_noise_geometry_lt: 45.0
+    surface_noise_ligandability_lt: 45.0
+    surface_noise_interface_fraction_lt: 0.10
+  reference:
+    contact_cutoff_A: 4.5
+    near_dcc_max_A: 6.0
+    near_recall_min: 0.10
+    middle_dcc_max_A: 10.0
+    middle_recall_min: 0.20
+    middle_iou_min: 0.15
+    far_dcc_max_A: 12.0
+    far_recall_min: 0.50
+    far_iou_min: 0.15
+  md:
+    concordant_iou_min: 0.15
+    concordant_precision_min: 0.20
+    concordant_center_max_A: 6.0
+    partial_iou_min: 0.05
+    alternative_iou_min: 0.05
+    alternative_center_max_A: 6.0
+    boundary_shift_center_max_A: 8.0
+statistics:
+  bootstrap_iterations: 10000
+  random_seed: 20260710

@@ -1,0 +1,4 @@
+pdb_id,Docking_software,GlideScore_kcal_per_mol,Raw_ligand_RMSD_A,RMSD_threshold_call,Failure_or_warning_reason
+4W9H,ToyDock 1.0,,3.5,RMSD > 3 A,synthetic missing score retained as NA
+5J89,ToyDock 1.0,-5.0,1.2,RMSD <= 2 A,none
+5TBM,ToyDock 1.0,-4.0,2.5,2 A < RMSD <= 3 A,none

@@ -1,0 +1,58 @@
+schema_version: 1
+output:
+  formats: [svg, png]
+  png_dpi: 600
+  editable_svg_text: true
+palette:
+  navy: "#274C5E"
+  teal: "#2A9D8F"
+  gold: "#E9C46A"
+  coral: "#E76F51"
+  blue: "#5B8DB8"
+  gray: "#98A2A8"
+  light: "#E9EEF1"
+category_order: [orthosteric, interface/PPI, allosteric, complex-dependent]
+category_colors:
+  orthosteric: "#5B8DB8"
+  interface/PPI: "#2A9D8F"
+  allosteric: "#E9C46A"
+  complex-dependent: "#E76F51"
+figures:
+  figure1:
+    stem: repository_summary_figure_1_candidate_landscape
+    size_inches: [7.25, 5.8]
+    panels:
+      a: {title: Reference-blind candidate landscape, x_label: Formal cluster-v2 candidates, y_label: Target}
+      b: {title: Reference and first-supported ranks, x_label: Within-target rank, y_label: Target}
+      c: {title: Two non-equivalent endpoints, x_label: Rank threshold, y_label: Fraction of evaluable targets}
+      d: {title: Uncertainty reflects family structure, x_label: Estimate and 95% bootstrap interval, y_label: Metric}
+  figure2:
+    stem: repository_summary_figure_2_qc_and_orel_ablation
+    size_inches: [7.25, 5.6]
+    panels:
+      a: {title: Automated structural QC states, x_label: Static Top-3 candidates, y_label: QC state}
+      b: {title: Reference-rank trade-offs, x_label: Full-model first R_auto rank, y_label: Without-O_rel first R_auto rank}
+      c: {title: Assembly-supported candidates can be lost, x_label: Full-model first-supported rank, y_label: Without-O_rel first-supported rank}
+      d: {title: O_rel changes local order to varying degrees, x_label: "Spearman rho: full vs without O_rel", y_label: Target}
+  figure3:
+    stem: repository_summary_figure_3_posthoc_evidence
+    size_inches: [7.25, 5.6]
+    panels:
+      a: {title: Rule-based Top-3 evidence states, x_label: Static rank, y_label: Candidates}
+      b: {title: Static-dynamic evidence is target-specific, x_label: MD runs, y_label: Concordance call}
+      c: {title: Pose recovery is mostly local and favorable, x_label: Raw redocking RMSD (A), y_label: Target}
+      d: {title: Assembly context matters most in complex cases, x_label: Fraction of targets, y_label: Pocket archetype}
+  figure4:
+    stem: repository_summary_figure_4_representative_cases
+    size_inches: [7.25, 7.1]
+    panels:
+      a: {title: Static modules, x_label: Static module score, y_label: Module}
+      b: {title: Rank and post-static evidence, x_label: Model, y_label: Within-target rank (lower is better)}
+      c: {title: Static modules, x_label: Static module score, y_label: Module}
+      d: {title: Rank and post-static evidence, x_label: Model, y_label: Within-target rank (lower is better)}
+      e: {title: Static modules, x_label: Static module score, y_label: Module}
+      f: {title: Rank and post-static evidence, x_label: Model, y_label: Within-target rank (lower is better)}
+case_titles:
+  5J89: Boundary-sensitive supported interface
+  5TBM: Assembly candidate vs internal allosteric site
+  4W9H: Assembly-reference-dynamic conflict

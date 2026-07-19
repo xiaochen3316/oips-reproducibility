@@ -1,0 +1,2 @@
+pdb_id,working_cluster_id,cluster_v2_id,mapped_record_count,working_cluster_member_count,mapping_fraction,unmappable_record_count,mapping_type
+5TBM,toy-excluded,,0,1,0.0,1,unmappable

@@ -1,0 +1,22 @@
+pdb_id,reference_cluster_v2_id,reference_cluster_static_rank,Raw_ligand_RMSD_A,GlideScore_kcal_per_mol,RMSD_threshold_call,Reference_pose_recovered,Failure_or_warning_reason,redocking_role
+1A9M,1A9M_V2C001,1,0.9391,-13.093,RMSD <= 2 A,true,none within available fields,posthoc_reference_region_chemical_validation_not_static_ranking
+1FAP,1FAP_V2C002,1,1.1269,-14.826,RMSD <= 2 A,true,none within available fields,posthoc_reference_region_chemical_validation_not_static_ranking
+1HIH,1HIH_V2C004,1,1.696,-13.981,RMSD <= 2 A,true,none within available fields,posthoc_reference_region_chemical_validation_not_static_ranking
+1HSG,1HSG_V2C001,1,0.1635,-15.752,RMSD <= 2 A,true,none within available fields,posthoc_reference_region_chemical_validation_not_static_ranking
+1SHL,1SHL_V2C002,1,1.059,-6.217,RMSD <= 2 A,true,none within available fields,posthoc_reference_region_chemical_validation_not_static_ranking
+1TCO,1TCO_V2C011,4,0.454,-18.69,RMSD <= 2 A,true,none within available fields,posthoc_reference_region_chemical_validation_not_static_ranking
+3DJI,3DJI_V2C001,3,2.0658,-4.735,2 A < RMSD <= 3 A,false,"pose exceeds 2-A conventional redocking threshold; atom mapping, symmetry, grid, and assembly context require author review",posthoc_reference_region_chemical_validation_not_static_ranking
+4W9H,4W9H_V2C001,10,3.5435,-9.947,RMSD > 3 A,false,"pose exceeds 2-A conventional redocking threshold; atom mapping, symmetry, grid, and assembly context require author review",posthoc_reference_region_chemical_validation_not_static_ranking
+5J89,5J89_V2C003,1,0.3683,-11.85,RMSD <= 2 A,true,none within available fields,posthoc_reference_region_chemical_validation_not_static_ranking
+5LGE,5LGE_V2C017,2,0.6733,-13.16,RMSD <= 2 A,true,none within available fields,posthoc_reference_region_chemical_validation_not_static_ranking
+5NIU,5NIU_V2C002,1,2.6195,-12.928,2 A < RMSD <= 3 A,false,"pose exceeds 2-A conventional redocking threshold; atom mapping, symmetry, grid, and assembly context require author review",posthoc_reference_region_chemical_validation_not_static_ranking
+5TBM,5TBM_V2C002,2,0.8186,-12.324,RMSD <= 2 A,true,none within available fields,posthoc_reference_region_chemical_validation_not_static_ranking
+6E3S,6E3S_V2C006,3,0.8032,-10.874,RMSD <= 2 A,true,none within available fields,posthoc_reference_region_chemical_validation_not_static_ranking
+6R3K,6R3K_V2C005,2,1.1618,-13.319,RMSD <= 2 A,true,none within available fields,posthoc_reference_region_chemical_validation_not_static_ranking
+6WKQ,6WKQ_V2C011,6,0.8896,-11.196,RMSD <= 2 A,true,none within available fields,posthoc_reference_region_chemical_validation_not_static_ranking
+7BEA,7BEA_V2C003,1,0.6731,-10.575,RMSD <= 2 A,true,none within available fields,posthoc_reference_region_chemical_validation_not_static_ranking
+7JRA,7JRA_V2C007,2,0.26,-15.052,RMSD <= 2 A,true,none within available fields,posthoc_reference_region_chemical_validation_not_static_ranking
+7O2I,7O2I_V2C001,1,1.9883,-12.371,RMSD <= 2 A,true,none within available fields,posthoc_reference_region_chemical_validation_not_static_ranking
+8EA7,8EA7_V2C003,1,0.2055,-14.199,RMSD <= 2 A,true,none within available fields,posthoc_reference_region_chemical_validation_not_static_ranking
+8P1O,8P1O_V2C001,1,1.8758,-14.133,RMSD <= 2 A,true,none within available fields,posthoc_reference_region_chemical_validation_not_static_ranking
+8SE5,8SE5_V2C003,1,0.6817,-15.294,RMSD <= 2 A,true,none within available fields,posthoc_reference_region_chemical_validation_not_static_ranking

@@ -1,0 +1,13 @@
+name: oips-repro
+channels:
+  - conda-forge
+dependencies:
+  - python>=3.11,<3.13
+  - numpy>=2.1,<3
+  - pandas>=2.2,<3.1
+  - scipy>=1.14,<2
+  - matplotlib>=3.9,<4
+  - pyyaml>=6,<7
+  - jsonschema>=4.23,<5
+  - pytest>=8.3,<9
+  - pytest-cov>=6,<7

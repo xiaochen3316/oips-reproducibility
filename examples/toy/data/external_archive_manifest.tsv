@@ -1,0 +1,2 @@
+asset_id	pdb_id_or_scope	scientific_role	archive_filename_or_label	local_availability	repository	persistent_id	bytes	sha256	access_status	completeness	license_status	source_version_or_date	notes
+md-5tbm-toy-full-trajectories	5TBM	full MD trajectories	md/5tbm/toy-full-trajectories	not_available_in_source_materials	not_archived		not_available_in_source_materials	not_available_in_source_materials	not_available_in_source_materials	No full trajectory exists for this synthetic fixture	manifest_only	toy_fixture_v1	Explicitly exercises the MD_not_available state.

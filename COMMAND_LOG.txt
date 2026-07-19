@@ -1,0 +1,10 @@
+2026-07-18  python --version
+2026-07-18  python -m pip install --editable ".[test]"
+2026-07-18  python -m oips_repro --help
+2026-07-18  python -m oips_repro validate-data --config config/manuscript.yaml
+2026-07-18  python -m oips_repro reproduce --config config/manuscript.yaml --output EPHEMERAL_OUTPUT
+2026-07-18  python -m oips_repro verify --config config/manuscript.yaml --bundle EPHEMERAL_OUTPUT --snapshot tests/scientific/data/expected_summary.json
+2026-07-18  python -m pytest -q
+2026-07-18  python scripts/release_check.py --repository-root . --data-manifest data/manifest.tsv --release-manifest release/manifest.json
+2026-07-18  git init -b main
+2026-07-18  git add -A

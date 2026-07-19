@@ -1,0 +1,2 @@
+pdb_id,MD_run,Simulation_context,Persistent_MD_contact_residues,MD_contact_center,D_dyn_run_score
+5J89,toy-run-1,native,A:ALA:1:;B:GLY:1:,0.5;1.5;0.0,88.0

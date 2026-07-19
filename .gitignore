@@ -1,0 +1,41 @@
+.worktrees/
+.superpowers/
+
+# Python environments and caches
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+
+# Package build artifacts
+build/
+dist/
+*.egg-info/
+
+# Editors and operating systems
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Local logs, temporary files, and secrets
+*.log
+*.tmp
+*.bak
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+local-config.*
+secrets.*
+
+# Reproduced outputs are generated locally; retain the empty directory marker.
+results/reproduced/**
+!results/reproduced/.gitkeep

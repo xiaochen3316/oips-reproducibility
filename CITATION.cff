@@ -1,0 +1,41 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it using the metadata below."
+title: "OIPS Reproducibility Package"
+type: software
+version: 1.0.0
+license: BSD-3-Clause
+authors:
+  - family-names: Chen
+    given-names: Xiao
+    affiliation: "Nanjing University of Chinese Medicine, Nanjing 210023, China"
+  - family-names: Zhu
+    given-names: Yifan
+    affiliation: "Nanjing University of Chinese Medicine, Nanjing 210023, China"
+  - family-names: Zhao
+    given-names: Shilei
+    affiliation: "Nanjing University of Chinese Medicine, Nanjing 210023, China"
+  - family-names: Zhang
+    given-names: Xin
+    affiliation: "Nanjing University of Chinese Medicine, Nanjing 210023, China"
+  - family-names: Sun
+    given-names: Haopeng
+    email: sunhaopeng@163.com
+    affiliation: "School of Pharmacy, China Pharmaceutical University, Nanjing, 211198, China"
+  - family-names: Chen
+    given-names: Yao
+    email: 300630@njucm.edu.cn
+    affiliation: "Nanjing University of Chinese Medicine, Nanjing 210023, China"
+  - family-names: Xue
+    given-names: Xin
+    email: xuexin@njucm.edu.cn
+    affiliation: "National and Local Collaborative Engineering Center of Chinese Medicinal Resources Industrialization and Formulae Innovative Medicine, Jiangsu Collaborative Innovation Center of Chinese Medicinal Resources Industrialization, Jiangsu Key Laboratory for High Technology Research of TCM Formulae, Nanjing University of Chinese Medicine, Nanjing 210023, China"
+abstract: >-
+  Deterministic reconstruction, static scoring, post-hoc evidence mapping,
+  evaluation, and figure generation for an OIPS-assisted analysis of competing
+  pockets in oligomeric proteins.
+keywords:
+  - computational chemistry
+  - oligomeric proteins
+  - pocket detection
+  - reproducibility
+  - OIPS

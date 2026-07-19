@@ -1,0 +1,17 @@
+row_id,pdb_id,tool,pocket_id,display_order,sitemap_rank,center_x,center_y,center_z,center_method,residue_count,residue_set_json,pocket_geometry_score,pocket_ligandability_score
+1,4W9H,CASTpFold,B,1,,15.0,1.5,0.0,toy_centroid,2,"[""A:LEU:2:"", ""B:SER:2:""]",80.0,
+2,4W9H,CavityPlus,C,1,,30.0,0.0,0.0,toy_centroid,1,"[""A:TYR:3:""]",40.0,30.0
+3,4W9H,DoGSite3,A,1,,0.3,1.5,0.0,toy_centroid,2,"[""A:ALA:1:"", ""B:GLY:1:""]",90.0,85.0
+4,4W9H,DoGSiteScorer,B,1,,15.2,1.5,0.0,toy_centroid,2,"[""A:LEU:2:"", ""B:SER:2:""]",75.0,70.0
+5,4W9H,SiteMap,A,1,1,0.5,1.5,0.0,toy_centroid,2,"[""A:ALA:1:"", ""B:GLY:1:""]",95.0,92.0
+6,5J89,CASTpFold,B,1,,15.0,1.5,0.0,toy_centroid,2,"[""A:LEU:2:"", ""B:SER:2:""]",80.0,
+7,5J89,CavityPlus,C,1,,30.0,0.0,0.0,toy_centroid,1,"[""A:TYR:3:""]",40.0,30.0
+8,5J89,DoGSite3,A,1,,0.3,1.5,0.0,toy_centroid,2,"[""A:ALA:1:"", ""B:GLY:1:""]",90.0,85.0
+9,5J89,DoGSiteScorer,B,1,,15.2,1.5,0.0,toy_centroid,2,"[""A:LEU:2:"", ""B:SER:2:""]",75.0,70.0
+10,5J89,SiteMap,A,1,1,0.5,1.5,0.0,toy_centroid,2,"[""A:ALA:1:"", ""B:GLY:1:""]",95.0,92.0
+11,5TBM,CASTpFold,B,1,,15.0,1.5,0.0,toy_centroid,2,"[""A:LEU:2:"", ""B:SER:2:""]",80.0,
+12,5TBM,CavityPlus,C,1,,30.0,0.0,0.0,toy_centroid,1,"[""A:TYR:3:""]",40.0,30.0
+13,5TBM,DoGSite3,A,1,,0.3,1.5,0.0,toy_centroid,2,"[""A:ALA:1:"", ""B:GLY:1:""]",90.0,85.0
+14,5TBM,DoGSiteScorer,B,1,,15.2,1.5,0.0,toy_centroid,2,"[""A:LEU:2:"", ""B:SER:2:""]",75.0,70.0
+15,5TBM,SiteMap,A,1,1,0.5,1.5,0.0,toy_centroid,2,"[""A:ALA:1:"", ""B:GLY:1:""]",95.0,92.0
+16,5TBM,SiteMap,excluded,2,2,,,,unavailable_no_center,0,[],55.0,50.0

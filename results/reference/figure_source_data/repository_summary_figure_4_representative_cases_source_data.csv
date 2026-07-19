@@ -1,0 +1,25 @@
+panel,record_id,series,group,x,y,x_label,y_label,lower,upper,annotation
+a,5J89,C_cons,Consensus,76.530612244898,0,Static module score,Module,,,
+a,5J89,G_geo,Geometry,95.9685684259259,1,Static module score,Module,,,
+a,5J89,O_rel_formal,Oligomer relevance,83.9945415554505,3,Static module score,Module,,,
+a,5J89,P_lig,Ligandability,73.08687,2,Static module score,Module,,,
+a,5J89,Q_evidence,Evidence quality,98,4,Static module score,Module,,,
+b,5J89_full,Reference rank,5J89,0,1,Model,Within-target rank (lower is better),,,MD: concordant; Redocking RMSD: 0.368 A
+b,5J89_static,Static top,5J89,0,1,Model,Within-target rank (lower is better),,,
+b,5J89_without,Reference rank,5J89,1,1,Model,Within-target rank (lower is better),,,
+c,5TBM,C_cons,Consensus,100,0,Static module score,Module,,,
+c,5TBM,G_geo,Geometry,86.8331041111111,1,Static module score,Module,,,
+c,5TBM,O_rel_formal,Oligomer relevance,85.8581076923659,3,Static module score,Module,,,
+c,5TBM,P_lig,Ligandability,57.7747162837163,2,Static module score,Module,,,
+c,5TBM,Q_evidence,Evidence quality,100,4,Static module score,Module,,,
+d,5TBM_full,Reference rank,5TBM,0,2,Model,Within-target rank (lower is better),,,MD: static_dynamic_conflict; Redocking RMSD: 0.819 A
+d,5TBM_static,Static top,5TBM,0,1,Model,Within-target rank (lower is better),,,
+d,5TBM_without,Reference rank,5TBM,1,1,Model,Within-target rank (lower is better),,,
+e,4W9H,C_cons,Consensus,100,0,Static module score,Module,,,
+e,4W9H,G_geo,Geometry,98.3344355555556,1,Static module score,Module,,,
+e,4W9H,O_rel_formal,Oligomer relevance,80.2520628800053,3,Static module score,Module,,,
+e,4W9H,P_lig,Ligandability,69.12772,2,Static module score,Module,,,
+e,4W9H,Q_evidence,Evidence quality,100,4,Static module score,Module,,,
+f,4W9H_full,Reference rank,4W9H,0,10,Model,Within-target rank (lower is better),,,MD: static_dynamic_conflict; Redocking RMSD: 3.543 A
+f,4W9H_static,Static top,4W9H,0,1,Model,Within-target rank (lower is better),,,
+f,4W9H_without,Reference rank,4W9H,1,3,Model,Within-target rank (lower is better),,,

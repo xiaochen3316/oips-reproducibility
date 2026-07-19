@@ -1,0 +1,4 @@
+pdb_id,selected_ligand,ligand_status,reference_ligand_annotation,override_applied,decision_id
+4W9H,LIG:L:101:,ok,LIG:L:101:,false,not_applicable
+5J89,LIG:L:101:,ok,LIG:L:101:,false,not_applicable
+5TBM,LIG:L:101:,ok,LIG:L:101:,false,not_applicable

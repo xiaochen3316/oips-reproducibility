@@ -1,0 +1,11 @@
+scenario_id,perturbed_module,direction,multiplier,target_N,baseline_top1_retained_N,mean_top3_jaccard,median_spearman_rho,Reference_Top1_N,Reference_Top3_N,First_supported_Top1_N,First_supported_Top3_N
+C_cons_decrease_20pct,C_cons,decrease,0.8,21,21,0.904761904761905,0.997436245252306,12,19,20,21
+C_cons_increase_20pct,C_cons,increase,1.2,21,21,0.976190476190476,0.998148833765272,12,18,20,21
+G_geo_decrease_20pct,G_geo,decrease,0.8,21,21,0.976190476190476,0.996992481203007,12,18,20,21
+G_geo_increase_20pct,G_geo,increase,1.2,21,21,0.976190476190476,0.997402597402598,12,18,20,21
+O_rel_formal_decrease_20pct,O_rel_formal,decrease,0.8,21,21,0.928571428571429,0.99703557312253,12,18,20,21
+O_rel_formal_increase_20pct,O_rel_formal,increase,1.2,21,21,0.914285714285714,0.995213675213675,12,17,20,21
+P_lig_decrease_20pct,P_lig,decrease,0.8,21,20,0.976190476190476,0.997948717948718,11,17,20,21
+P_lig_increase_20pct,P_lig,increase,1.2,21,21,0.952380952380952,0.998541447208492,12,19,20,21
+Q_evidence_decrease_20pct,Q_evidence,decrease,0.8,21,21,0.976190476190476,0.999891445940078,12,18,20,21
+Q_evidence_increase_20pct,Q_evidence,increase,1.2,21,21,1,0.999938294458843,12,18,20,21
